@@ -3,30 +3,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 function lenisScroll() {
   const lenisInstance = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)),
-    smoothWheel: true,
-    smoothTouch: true,
+    duration: 1.4,  // Slightly longer duration for smoother scrolling
+    easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
+    smoothWheel: true,  // Enable smooth wheel scrolling
+    smoothTouch: true,  // Enable smooth touch scrolling (for mobile/tablet)
   });
 
-  // Start the scroll animation loop
+  // Start the scroll animation loop (RAF = Request Animation Frame)
   function raf(time) {
-    lenisInstance.raf(time);
-    requestAnimationFrame(raf);
+    lenisInstance.raf(time);  // Call Lenis raf method for smooth scrolling
+    requestAnimationFrame(raf); // Recursively call raf for continuous smooth animation
   }
 
   // Run animation frame loop
   requestAnimationFrame(raf);
 
-  // Debugging: log the scroll position to track behavior
+  // Debugging: Log the scroll position to track behavior
   lenisInstance.on('scroll', ({ scroll }) => {
-    // console.log("Scroll Position:", scroll);
+    console.log("Scroll Position:", scroll); // You can use this to track the position
   });
 }
 
-// Initialize Lenis scroll
+// Initialize Lenis smooth scroll
 lenisScroll();
 
+
+window.addEventListener('resize', () => {
+  // Adjust or reinitialize Lenis scroll if necessary
+  lenisScroll();
+});
 
 
 $(document).ready(function () {
