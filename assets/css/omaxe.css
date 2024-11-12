@@ -217,7 +217,7 @@ input:focus-visible {
   left: 0;
   top: 0px;
   content: "";
-  background: #847175;
+  background: #806f77;
   height: 50vh;
   width: 250%;
   z-index: 9;
@@ -229,7 +229,7 @@ input:focus-visible {
   z-index: 9;
   left: 50%;
   top: 10%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(50%) scale(1.2);
   opacity: 0;
 }
 .collection-text {

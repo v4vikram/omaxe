@@ -36,9 +36,26 @@ window.addEventListener('resize', () => {
 
 $(document).ready(function () {
   $(window).on("load", function () {
+
+    gsap.fromTo(".form-section", {
+      opacity:0,
+     },{
+       opacity:1,
+       delay:2.5,
+       duration:2.5,
+     ease: "power2.inOut",
+      }
+   );
+
+    gsap.to(".banner-1", {
+      transform: "translateY(-40%)",
+     duration:2.5,
+     ease: "power2.inOut",
+    });
+
     gsap.to(".preloader-wrapper", {
-      delay: 1,
-      duration: 1,
+      delay: 0,
+      duration: 3,
       opacity: 0,
       onComplete: function () {
         $(".preloader-wrapper").css("display", "none");
@@ -52,8 +69,10 @@ $(document).ready(function () {
           .to(
             ".logo-2",
             {
+              transform: "translateX(-50%) translateY(0%) scale(1)",
               opacity: 1,
-              duration: 1,
+              duration:2,
+              ease: "power1.in",
             },
             "<"
           )
