@@ -1,0 +1,268 @@
+/* @import url('./font.css'); */
+
+:root {
+  --orange: #f04e23;
+  --yellow: #e99d23;
+  --mehroon: #981b1e;
+  --dark-brown: #501b15;
+  --white: #ffffff;
+  --black: #000000;
+  --transition: all 0.6s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Lenis */
+html.lenis {
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 1.3vh;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mehroon);
+}
+
+/* Default */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  /* height: 100%; */
+}
+label.error {
+  color: red;
+  font-size: 12px;
+  font-family: "Montserrat";
+}
+input:focus-visible {
+  outline: none;
+}
+/* Components */
+.btn-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+}
+.btn-1 {
+  display: block;
+  padding: 5px 20px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Apply blur only to the background */
+  color: #333; /* Optional: text color for better contrast */
+}
+
+/* ============== Main Content ================= */
+
+/* Animations */
+.fade {
+  opacity: 0;
+}
+
+/* Preloader */
+.preloader-wrapper {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  background: rgb(85, 177, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 177, 218, 1) 0%,
+    rgba(27, 91, 186, 1) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+}
+
+/* Nav */
+.nav-fixed {
+  position: fixed;
+  left: 0px;
+  top: 5%;
+  width: 100%;
+  z-index: 9999;
+}
+/* menu lines */
+.menu_lines_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu_lines {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--black);
+  transition: all 0.3s ease;
+}
+.menu_line-1_move {
+  transform: translateY(3px);
+  transition: all 0.3s ease;
+}
+.menu_line-2_move {
+  transform: translateY(-3px);
+}
+
+/* menu toggler*/
+
+.menu_toggler{
+    width: auto;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.btn-1-custom{
+    width: auto;
+    float: right
+}
+/* menu  links */
+.menu-wrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    flex-direction: column;
+    display: flex;
+    padding: 50px;
+}
+.menu-wrapper a {
+    font-size: 35px;
+    color: var(--black);
+}
+
+/* ground section */
+.bg-image {
+  width: 100% !important;
+  height: 100vh;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  background-size: cover !important;
+  position: relative;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.bg-image > * {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  overflow: hidden;
+  /* height: 215vh; */
+  width: 100%;
+}
+
+.banner-1-bg {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  z-index: 9;
+}
+/* .ground-2{
+    transform: translateX(-20%);
+} */
+.ground-bg {
+  position: relative;
+  /* overflow: hidden; */
+  img {
+    position: relative;
+    z-index: 99;
+  }
+}
+.ground-bg::after {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  content: "";
+  background: #847175;
+  height: 50vh;
+  width: 250%;
+  z-index: 9;
+}
+
+.logo-2 {
+  width: 27%;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.collection-text {
+  position: absolute;
+  z-index: 99;
+  /* left: 0%; */
+  top: 20%;
+  /* background-color: red; */
+  /* transform: translateX(-50%); */
+
+  h1 {
+    font-size: 50px;
+    color: var(--white);
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  img {
+    height: auto;
+  }
+  .bg-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

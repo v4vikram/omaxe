@@ -1,0 +1,68 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Font weight classes using Montserrat */
+
+/* Font weight 100 */
+.montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Font weight 200 */
+.montserrat-200 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Font weight 300 */
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Font weight 400 */
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Font weight 500 */
+.montserrat-500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Font weight 600 */
+.montserrat-600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Font weight 700 */
+.montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Font weight 800 */
+.montserrat-800 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Font weight 900 */
+.montserrat-900 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
