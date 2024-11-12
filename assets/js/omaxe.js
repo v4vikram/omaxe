@@ -1,23 +1,33 @@
-// Initialize Lenis
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  direction: "vertical",
-  smooth: true,
-  smoothTouch: false,
-});
+gsap.registerPlugin(ScrollTrigger);
 
-// Animation frame for smooth scrolling
-function raf(time) {
-  lenis.raf(time);
+
+function lenisScroll() {
+  const lenisInstance = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)),
+    smoothWheel: true,
+    smoothTouch: true,
+  });
+
+  // Start the scroll animation loop
+  function raf(time) {
+    lenisInstance.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  // Run animation frame loop
   requestAnimationFrame(raf);
+
+  // Debugging: log the scroll position to track behavior
+  lenisInstance.on('scroll', ({ scroll }) => {
+    console.log("Scroll Position:", scroll);
+  });
 }
 
-requestAnimationFrame(raf);
+// Initialize Lenis scroll
+lenisScroll();
 
-// Optional: Sync Lenis with GSAP's ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-lenis.on("scroll", ScrollTrigger.update);
+
 
 $(document).ready(function () {
   $(window).on("load", function () {
