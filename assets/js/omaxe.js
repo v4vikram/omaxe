@@ -25,12 +25,12 @@ function lenisScroll() {
 }
 
 // Initialize Lenis smooth scroll
-// lenisScroll();
+lenisScroll();
 
 
 window.addEventListener('resize', () => {
   // Adjust or reinitialize Lenis scroll if necessary
-  // lenisScroll();
+  lenisScroll();
 });
 
 

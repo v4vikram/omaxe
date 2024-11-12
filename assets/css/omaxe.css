@@ -14,16 +14,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-body,
+/* body,
 html {
   height: 100%;
   width: 100%;
-}
+} */
 
 /* Lenis */
-html.lenis {
+/* html.lenis {
   overflow-x: hidden;
-}
+} */
 
 /* Scrollbar */
 ::-webkit-scrollbar {
