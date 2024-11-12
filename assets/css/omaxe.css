@@ -198,9 +198,12 @@ input:focus-visible {
   backdrop-filter: blur(0px);
   z-index: 9;
 }
-/* .ground-2{
-    transform: translateX(-20%);
-} */
+.ground-2{
+    filter: blur(30px);
+}
+.collection-text{
+    opacity: 0;
+}
 .ground-bg {
   position: relative;
   /* overflow: hidden; */

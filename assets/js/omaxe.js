@@ -20,7 +20,7 @@ function lenisScroll() {
 
   // Debugging: log the scroll position to track behavior
   lenisInstance.on('scroll', ({ scroll }) => {
-    console.log("Scroll Position:", scroll);
+    // console.log("Scroll Position:", scroll);
   });
 }
 
@@ -108,6 +108,33 @@ $(document).ready(function () {
       .to(".ground-bg", {
         transform: "translateX(-100%)",
       });
+
+      gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".ground-2",
+          start: "top 90%",
+          end: "center 50%",
+          scrub: true, // Smooth transition linked to scroll
+          markers: false,
+        },
+      })
+      .to(".ground-2",{
+          filter:"blur(0px)"
+      })
+
+      gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".collection-text",
+          start: "top 70%",
+          end: "bottom top",
+          scrub: true, // Smooth transition linked to scroll
+          markers: false,
+        },
+      }).to(".collection-text",{
+        opacity: 1,
+      })
   });
 
   let isToggled = true;
