@@ -90,7 +90,7 @@ $(document).ready(function () {
       })
       .to(
         ".banner-1-bg",
-        { backdropFilter: "blur(30px)" } // End with blur
+        { backdropFilter: "blur(0px)" } // End with blur
       );
 
     gsap
