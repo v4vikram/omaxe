@@ -31,14 +31,14 @@ $(document).ready(function () {
         const tl = gsap.timeline();
 
         tl.to(".banner-1-bg", {
-          duration: 2,
+          duration: 1,
           backdropFilter: "blur(0px)",
         })
           .to(
             ".logo-2",
             {
               opacity: 1,
-              duration: 2,
+              duration: 1,
             },
             "<"
           )
@@ -60,7 +60,7 @@ $(document).ready(function () {
           start: "-20% top",
           end: "bottom top",
           scrub: true, // Smooth transition linked to scroll
-          markers: true,
+          markers: false,
         },
       })
       .to(".logo-2", {
