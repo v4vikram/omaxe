@@ -119,7 +119,7 @@ input:focus-visible {
 /* menu toggler*/
 
 .menu_toggler{
-    width: auto;
+    width: fit-content;
     height: 54px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 28px;
@@ -127,7 +127,7 @@ input:focus-visible {
     display: block;
     cursor: pointer;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 .btn-1-custom{
     width: auto;
@@ -141,6 +141,12 @@ input:focus-visible {
     flex-direction: column;
     display: flex;
     padding: 50px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.menu-wrapper-active{
+  transition: all 4s ease;
+  opacity: 1;
 }
 .menu-wrapper a {
     font-size: 35px;
@@ -243,6 +249,13 @@ input:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .logo-2{
+    width: 40%;
+  }
+  .menu-wrapper {
+    padding: 20px;
+    
+}
 }
 
 @media (max-width: 576px) {
@@ -251,6 +264,9 @@ input:focus-visible {
   }
   .bg-image {
     height: 400px;
+  }
+  .logo-2{
+    width: 75%;
   }
 }
 

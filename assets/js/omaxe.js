@@ -6,7 +6,7 @@ let rafId = null;
 $(document).ready(function () {
   function lenisScroll() {
     if (window.innerWidth > 1024) {
-      $('body').css('overflow', "hidden")
+      $("body").css("overflow", "hidden");
       if (!lenisInstance) {
         lenisInstance = new Lenis({
           duration: 1,
@@ -22,7 +22,7 @@ $(document).ready(function () {
         rafId = requestAnimationFrame(raf);
       }
     } else if (lenisInstance) {
-      $('body').css('overflow', "hidden")
+      $("body").css("overflow", "hidden");
       lenisInstance.destroy();
       lenisInstance = null;
       cancelAnimationFrame(rafId);
@@ -34,41 +34,44 @@ $(document).ready(function () {
 });
 
 $(window).on("load", function () {
-
   gsap.to(
     ".logo-2",
     {
-      transform: "translateX(-50%) translateY(0%) scale(1)",
+      transform:  window.innerWidth > 769 ? "translateX(-50%) translateY(0%) scale(1)" : "translateX(-50%) translateY(50%) scale(1)",
       opacity: 1,
-      duration:2,
+      duration: 2,
       ease: "power1.in",
     },
     "<"
-  )
+  );
 
-  gsap.fromTo(".form-section", {
-    opacity:0,
-   },{
-     opacity:1,
-     delay:1,
-     duration:2.5,
-   ease: "power2.inOut",
+  gsap.fromTo(
+    ".form-section",
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      delay: 1,
+      duration: 2.5,
+      ease: "power2.inOut",
     }
- );
+  );
 
   gsap.to(".banner-1", {
-    delay:0,
-    transform: window.innerWidth <= 769 ? "translateY(-0%)" : "translateY(-40%)",
-   duration:2.5,
-   ease: "power2.inOut",
+    delay: 0,
+    transform:
+      window.innerWidth <= 769 ? "translateY(-0%)" : "translateY(-40%)",
+    duration: 2.5,
+    ease: "power2.inOut",
   });
 
- gsap.to(".fade",{
-  delay:1,
-     duration:2.5,
-   ease: "power2.inOut",
+  gsap.to(".fade", {
+    delay: 1,
+    duration: 2.5,
+    ease: "power2.inOut",
     opacity: 1,
-  })
+  });
 
   gsap.to(".preloader-wrapper", {
     delay: 0,
@@ -83,16 +86,6 @@ $(window).on("load", function () {
         duration: 1,
         backdropFilter: "blur(0px)",
       })
-        .to(
-          ".logo-2",
-          {
-            transform: "translateX(-50%) translateY(0%) scale(1)",
-            opacity: 1,
-            duration:2,
-            ease: "power1.in",
-          },
-          "<"
-        )
     },
   });
 
@@ -143,7 +136,7 @@ $(window).on("load", function () {
       transform: "translateX(-100%)",
     });
 
-    gsap
+  gsap
     .timeline({
       scrollTrigger: {
         trigger: ".ground-2",
@@ -153,11 +146,11 @@ $(window).on("load", function () {
         markers: false,
       },
     })
-    .to(".ground-2",{
-        filter:"blur(0px)"
-    })
+    .to(".ground-2", {
+      filter: "blur(0px)",
+    });
 
-    gsap
+  gsap
     .timeline({
       scrollTrigger: {
         trigger: ".collection-text",
@@ -166,9 +159,10 @@ $(window).on("load", function () {
         scrub: true, // Smooth transition linked to scroll
         markers: false,
       },
-    }).to(".collection-text",{
-      opacity: 1,
     })
+    .to(".collection-text", {
+      opacity: 1,
+    });
 });
 
 $(document).ready(function () {
@@ -177,25 +171,33 @@ $(document).ready(function () {
   $(window).on("load", function () {
     // menu toggler
     $("#menu_toggler").click(function () {
+      // alert("hi");
       $(".menu_line-1").toggleClass("menu_line-1_move");
       $(".menu_line-2").toggleClass("menu_line-2_move");
+      
 
       if (isToggled) {
-        menuTl.to(".menu_toggler", {width: "500px", duration: 0.5 },"+=0");
-        menuTl.to(".menu_toggler", { delay:0.2, height: "400px",duration: 0.5},);
-
-        isToggled = false
+        menuTl.to(
+          ".menu_toggler",
+          { width: window.innerWidth > 768 ? "500px" : "100%", duration: 0.5 },
+          "+=0"
+        );
+        menuTl.to(".menu_toggler", {
+          delay: 0.2,
+          height: "400px",
+          duration: 0.5,
+        });
+        $(".menu-wrapper").addClass("menu-wrapper-active");
+        isToggled = false;
+      } else {
+        $(".menu-wrapper").removeClass("menu-wrapper-active");
+        menuTl.to(".menu_toggler", { height: "54px", duration: 0.5 }, "+=0");
+        menuTl.to(".menu_toggler", { width: "auto", duration: 0.5 });
+        isToggled = true;
       }
-      else{
-        menuTl.to(".menu_toggler", {height: "54px",duration: 0.5},"+=0");
-        menuTl.to(".menu_toggler", {width: "auto", duration: 0.5 });
-        isToggled = true
-      }
-      
     });
   });
 });
-
 
 // form validation
 $(document).ready(function () {
