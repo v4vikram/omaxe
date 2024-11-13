@@ -17,6 +17,7 @@ module.exports = {
         pink: "#e30479",
         lightPink:"#fde8e8",
         darkGray:"#0d0e12",
+        brown:"#857176"
       },
       screens: {
         '3xl': '1920px',

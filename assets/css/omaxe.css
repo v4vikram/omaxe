@@ -271,6 +271,9 @@ input:focus-visible {
 .btn-1 {
   padding: 0px 20px;
 }
+.ground-bg::after {
+display: none;
+}
 }
 
 @media (max-width: 425px) {
