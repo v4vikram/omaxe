@@ -1,40 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let lenisInstance = null; 
-function lenisScroll() {
-  if(!lenisInstance){
-    lenisInstance = new Lenis({
-      duration: 1.4,  // Slightly longer duration for smoother scrolling
-      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
-      smoothWheel: true,  // Enable smooth wheel scrolling
-      smoothTouch: false,  // Enable smooth touch scrolling (for mobile/tablet)
-    });
-  }
-
-
-  // Start the scroll animation loop (RAF = Request Animation Frame)
-  function raf(time) {
-    lenisInstance.raf(time);  // Call Lenis raf method for smooth scrolling
-    requestAnimationFrame(raf); // Recursively call raf for continuous smooth animation
-  }
-
-  // Run animation frame loop
-  requestAnimationFrame(raf);
-
-  // Debugging: Log the scroll position to track behavior
-  lenisInstance.on('scroll', ({ scroll }) => {
-    console.log("Scroll Position:", scroll); // You can use this to track the position
-  });
-}
-
-// Initialize Lenis smooth scroll
-lenisScroll();
-
-
-window.addEventListener('resize', () => {
-  // Adjust or reinitialize Lenis scroll if necessary
-  lenisScroll();
-});
+let lenisInstance = null;
 
 
 $(document).ready(function () {
@@ -55,13 +21,14 @@ $(document).ready(function () {
       opacity:0,
      },{
        opacity:1,
-       delay:2.5,
+       delay:1,
        duration:2.5,
      ease: "power2.inOut",
       }
    );
 
     gsap.to(".banner-1", {
+      delay:0,
       transform: "translateY(-40%)",
      duration:2.5,
      ease: "power2.inOut",
@@ -197,6 +164,44 @@ $(document).ready(function () {
       
     });
   });
+});
+
+
+
+function initializeLenis() {
+  if (!lenisInstance) {
+    lenisInstance = new Lenis({
+      duration: 1.4, // Slightly longer duration for smoother scrolling
+      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
+      smoothWheel: true, // Enable smooth wheel scrolling
+      smoothTouch: false, // Enable smooth touch scrolling (for mobile/tablet)
+    });
+
+    // Start the scroll animation loop
+    function raf(time) {
+      lenisInstance.raf(time); // Call Lenis raf method for smooth scrolling
+      requestAnimationFrame(raf); // Recursively call raf for continuous smooth animation
+    }
+
+    // Run the animation frame loop
+    requestAnimationFrame(raf);
+
+    // Debugging: Log the scroll position to track behavior
+    lenisInstance.on("scroll", ({ scroll }) => {
+      console.log("Scroll Position:", scroll); // You can use this to track the position
+    });
+  }
+}
+
+// Initialize Lenis smooth scroll once
+initializeLenis();
+
+window.addEventListener("resize", () => {
+  if (lenisInstance) {
+    lenisInstance.destroy(); // Destroy the existing instance if reinitializing on resize
+    lenisInstance = null; // Reset the instance variable
+  }
+  initializeLenis(); // Reinitialize after resize
 });
 
 // form validation
