@@ -1,45 +1,79 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let lenisInstance = null;
+let rafId = null;
 
+// lenis
+$(document).ready(function () {
+  function lenisScroll() {
+    if (window.innerWidth > 1024) {
+      $("body").css("overflow", "hidden");
+      if (!lenisInstance) {
+        lenisInstance = new Lenis({
+          duration: 1,
+          easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
+          smoothWheel: true, // Enable smooth wheel scrolling
+          smoothTouch: true, // Enable smooth touch scrolling (for mobile/tablet)
+        });
 
+        function raf(time) {
+          lenisInstance.raf(time);
+          rafId = requestAnimationFrame(raf);
+        }
+        rafId = requestAnimationFrame(raf);
+      }
+    } else if (lenisInstance) {
+      $("body").css("overflow", "auto");
+      lenisInstance.destroy();
+      lenisInstance = null;
+      cancelAnimationFrame(rafId);
+    }
+  }
+
+  lenisScroll();
+  window.addEventListener("resize", lenisScroll);
+});
+
+// animation
 $(document).ready(function () {
   $(window).on("load", function () {
-
     gsap.to(
       ".logo-2",
       {
         transform: "translateX(-50%) translateY(0%) scale(1)",
         opacity: 1,
-        duration:2,
+        duration: 2,
         ease: "power1.in",
       },
       "<"
-    )
+    );
 
-    gsap.fromTo(".form-section", {
-      opacity:0,
-     },{
-       opacity:1,
-       delay:1,
-       duration:2.5,
-     ease: "power2.inOut",
+    gsap.fromTo(
+      ".form-section",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        delay: 1,
+        duration: 2.5,
+        ease: "power2.inOut",
       }
-   );
+    );
 
     gsap.to(".banner-1", {
-      delay:0,
+      delay: 0,
       transform: "translateY(-40%)",
-     duration:2.5,
-     ease: "power2.inOut",
+      duration: 2.5,
+      ease: "power2.inOut",
     });
 
-   gsap.to(".fade",{
-    delay:1,
-       duration:2.5,
-     ease: "power2.inOut",
+    gsap.to(".fade", {
+      delay: 1,
+      duration: 2.5,
+      ease: "power2.inOut",
       opacity: 1,
-    })
+    });
 
     gsap.to(".preloader-wrapper", {
       delay: 0,
@@ -53,17 +87,16 @@ $(document).ready(function () {
         tl.to(".banner-1-bg", {
           duration: 1,
           backdropFilter: "blur(0px)",
-        })
-          .to(
-            ".logo-2",
-            {
-              transform: "translateX(-50%) translateY(0%) scale(1)",
-              opacity: 1,
-              duration:2,
-              ease: "power1.in",
-            },
-            "<"
-          )
+        }).to(
+          ".logo-2",
+          {
+            transform: "translateX(-50%) translateY(0%) scale(1)",
+            opacity: 1,
+            duration: 2,
+            ease: "power1.in",
+          },
+          "<"
+        );
       },
     });
 
@@ -114,7 +147,7 @@ $(document).ready(function () {
         transform: "translateX(-100%)",
       });
 
-      gsap
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: ".ground-2",
@@ -124,11 +157,11 @@ $(document).ready(function () {
           markers: false,
         },
       })
-      .to(".ground-2",{
-          filter:"blur(0px)"
-      })
+      .to(".ground-2", {
+        filter: "blur(0px)",
+      });
 
-      gsap
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: ".collection-text",
@@ -137,9 +170,10 @@ $(document).ready(function () {
           scrub: true, // Smooth transition linked to scroll
           markers: false,
         },
-      }).to(".collection-text",{
-        opacity: 1,
       })
+      .to(".collection-text", {
+        opacity: 1,
+      });
   });
 
   let isToggled = true;
@@ -151,57 +185,21 @@ $(document).ready(function () {
       $(".menu_line-2").toggleClass("menu_line-2_move");
 
       if (isToggled) {
-        menuTl.to(".menu_toggler", {width: "500px", duration: 0.5 },"+=0");
-        menuTl.to(".menu_toggler", { delay:0.2, height: "400px",duration: 0.5},);
+        menuTl.to(".menu_toggler", { width: "500px", duration: 0.5 }, "+=0");
+        menuTl.to(".menu_toggler", {
+          delay: 0.2,
+          height: "400px",
+          duration: 0.5,
+        });
 
-        isToggled = false
+        isToggled = false;
+      } else {
+        menuTl.to(".menu_toggler", { height: "54px", duration: 0.5 }, "+=0");
+        menuTl.to(".menu_toggler", { width: "auto", duration: 0.5 });
+        isToggled = true;
       }
-      else{
-        menuTl.to(".menu_toggler", {height: "54px",duration: 0.5},"+=0");
-        menuTl.to(".menu_toggler", {width: "auto", duration: 0.5 });
-        isToggled = true
-      }
-      
     });
   });
-});
-
-
-
-function initializeLenis() {
-  if (!lenisInstance) {
-    lenisInstance = new Lenis({
-      duration: 1.4, // Slightly longer duration for smoother scrolling
-      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
-      smoothWheel: true, // Enable smooth wheel scrolling
-      smoothTouch: false, // Enable smooth touch scrolling (for mobile/tablet)
-    });
-
-    // Start the scroll animation loop
-    function raf(time) {
-      lenisInstance.raf(time); // Call Lenis raf method for smooth scrolling
-      requestAnimationFrame(raf); // Recursively call raf for continuous smooth animation
-    }
-
-    // Run the animation frame loop
-    requestAnimationFrame(raf);
-
-    // Debugging: Log the scroll position to track behavior
-    lenisInstance.on("scroll", ({ scroll }) => {
-      console.log("Scroll Position:", scroll); // You can use this to track the position
-    });
-  }
-}
-
-// Initialize Lenis smooth scroll once
-initializeLenis();
-
-window.addEventListener("resize", () => {
-  if (lenisInstance) {
-    lenisInstance.destroy(); // Destroy the existing instance if reinitializing on resize
-    lenisInstance = null; // Reset the instance variable
-  }
-  initializeLenis(); // Reinitialize after resize
 });
 
 // form validation
