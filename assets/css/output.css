@@ -725,6 +725,10 @@ video {
   height: 100vh;
 }
 
+.h-\[65vh\] {
+  height: 65vh;
+}
+
 .max-h-fit {
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -1216,6 +1220,10 @@ video {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-\[105vh\] {
+    height: 105vh;
   }
 
   .md\:w-\[100\%\] {
