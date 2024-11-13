@@ -32,145 +32,146 @@ $(document).ready(function () {
   lenisScroll();
   window.addEventListener("resize", lenisScroll);
 });
-$(document).ready(function () {
-  $(window).on("load", function () {
 
-    gsap.to(
-      ".logo-2",
-      {
-        transform: "translateX(-50%) translateY(0%) scale(1)",
-        opacity: 1,
-        duration:2,
-        ease: "power1.in",
-      },
-      "<"
-    )
+$(window).on("load", function () {
 
-    gsap.fromTo(".form-section", {
-      opacity:0,
-     },{
-       opacity:1,
-       delay:1,
-       duration:2.5,
-     ease: "power2.inOut",
-      }
-   );
-
-    gsap.to(".banner-1", {
-      delay:0,
-      transform: "translateY(-40%)",
-     duration:2.5,
-     ease: "power2.inOut",
-    });
-
-   gsap.to(".fade",{
-    delay:1,
-       duration:2.5,
-     ease: "power2.inOut",
+  gsap.to(
+    ".logo-2",
+    {
+      transform: "translateX(-50%) translateY(0%) scale(1)",
       opacity: 1,
-    })
+      duration:2,
+      ease: "power1.in",
+    },
+    "<"
+  )
 
-    gsap.to(".preloader-wrapper", {
-      delay: 0,
-      duration: 3,
-      opacity: 0,
-      onComplete: function () {
-        $(".preloader-wrapper").css("display", "none");
+  gsap.fromTo(".form-section", {
+    opacity:0,
+   },{
+     opacity:1,
+     delay:1,
+     duration:2.5,
+   ease: "power2.inOut",
+    }
+ );
 
-        const tl = gsap.timeline();
-
-        tl.to(".banner-1-bg", {
-          duration: 1,
-          backdropFilter: "blur(0px)",
-        })
-          .to(
-            ".logo-2",
-            {
-              transform: "translateX(-50%) translateY(0%) scale(1)",
-              opacity: 1,
-              duration:2,
-              ease: "power1.in",
-            },
-            "<"
-          )
-      },
-    });
-
-    // for logo
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".logo-2",
-          start: "-20% top",
-          end: "bottom top",
-          scrub: true, // Smooth transition linked to scroll
-          markers: false,
-        },
-      })
-      .to(".logo-2", {
-        opacity: 0,
-      });
-
-    // Apply scroll-triggered blur effect on .banner-1-bg
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".banner-1-bg",
-          start: "40% 35%",
-          end: "bottom top",
-          scrub: true, // Smooth transition linked to scroll
-          markers: false,
-        },
-      })
-      .to(
-        ".banner-1-bg",
-        { backdropFilter: "blur(0px)" } // End with blur
-      );
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".ground-bg",
-          start: "top top",
-          end: "bottom top",
-          scrub: true, // Smooth transition linked to scroll
-          markers: false,
-          pin: true,
-          pinSpacing: true,
-        },
-      })
-      .to(".ground-bg", {
-        transform: "translateX(-100%)",
-      });
-
-      gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".ground-2",
-          start: "top 90%",
-          end: "center 50%",
-          scrub: true, // Smooth transition linked to scroll
-          markers: false,
-        },
-      })
-      .to(".ground-2",{
-          filter:"blur(0px)"
-      })
-
-      gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".collection-text",
-          start: "top 70%",
-          end: "bottom top",
-          scrub: true, // Smooth transition linked to scroll
-          markers: false,
-        },
-      }).to(".collection-text",{
-        opacity: 1,
-      })
+  gsap.to(".banner-1", {
+    delay:0,
+    transform: "translateY(-40%)",
+   duration:2.5,
+   ease: "power2.inOut",
   });
 
+ gsap.to(".fade",{
+  delay:1,
+     duration:2.5,
+   ease: "power2.inOut",
+    opacity: 1,
+  })
+
+  gsap.to(".preloader-wrapper", {
+    delay: 0,
+    duration: 3,
+    opacity: 0,
+    onComplete: function () {
+      $(".preloader-wrapper").css("display", "none");
+
+      const tl = gsap.timeline();
+
+      tl.to(".banner-1-bg", {
+        duration: 1,
+        backdropFilter: "blur(0px)",
+      })
+        .to(
+          ".logo-2",
+          {
+            transform: "translateX(-50%) translateY(0%) scale(1)",
+            opacity: 1,
+            duration:2,
+            ease: "power1.in",
+          },
+          "<"
+        )
+    },
+  });
+
+  // for logo
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".logo-2",
+        start: "-20% top",
+        end: "bottom top",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+      },
+    })
+    .to(".logo-2", {
+      opacity: 0,
+    });
+
+  // Apply scroll-triggered blur effect on .banner-1-bg
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".banner-1-bg",
+        start: "40% 35%",
+        end: "bottom top",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+      },
+    })
+    .to(
+      ".banner-1-bg",
+      { backdropFilter: "blur(0px)" } // End with blur
+    );
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".ground-bg",
+        start: "top top",
+        end: "bottom top",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+        pin: true,
+        pinSpacing: true,
+      },
+    })
+    .to(".ground-bg", {
+      transform: "translateX(-100%)",
+    });
+
+    gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".ground-2",
+        start: "top 90%",
+        end: "center 50%",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+      },
+    })
+    .to(".ground-2",{
+        filter:"blur(0px)"
+    })
+
+    gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".collection-text",
+        start: "top 70%",
+        end: "bottom top",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+      },
+    }).to(".collection-text",{
+      opacity: 1,
+    })
+});
+
+$(document).ready(function () {
   let isToggled = true;
   const menuTl = gsap.timeline();
   $(window).on("load", function () {
