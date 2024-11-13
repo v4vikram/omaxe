@@ -183,15 +183,15 @@ $(document).ready(function () {
           ".menu_toggler",
           {
             width: window.innerWidth > 768 ? "500px" : "100%",
-            duration: 1,
-            ease: "power2.out",
+            // duration: 1,
+            // ease: "power2.out",
           },
           "+=0"
         )
         .to(".menu_toggler", {
           height: "400px",
-          duration: 1,
-          ease: "power3.out",
+          // duration: 1,
+          // ease: "power3.out",
         })
         .to(".menu-wrapper", {
           opacity: 1,
