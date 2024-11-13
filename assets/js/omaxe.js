@@ -121,7 +121,7 @@ $(window).on("load", function () {
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: ".banner-1-bg",
+        trigger: ".ground-section",
         start: "40% 35%",
         end: "bottom top",
         scrub: true, // Smooth transition linked to scroll
@@ -129,14 +129,14 @@ $(window).on("load", function () {
       },
     })
     .to(
-      ".banner-1-bg",
-      { backdropFilter: "blur(0px)" } // End with blur
+      ".ground-section",
+      { backdropFilter: "blur(30px)" } // End with blur
     );
 
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: ".ground-bg",
+        trigger: ".ground-section",
         start: "top top",
         end: "bottom top",
         scrub: true, // Smooth transition linked to scroll
