@@ -58,7 +58,7 @@ $(window).on("load", function () {
 
   gsap.to(".banner-1", {
     delay:0,
-    transform: "translateY(-40%)",
+    transform: window.innerWidth <= 769 ? "translateY(-0%)" : "translateY(-40%)",
    duration:2.5,
    ease: "power2.inOut",
   });
