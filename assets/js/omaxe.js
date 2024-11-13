@@ -37,7 +37,10 @@ $(window).on("load", function () {
   gsap.to(
     ".logo-2",
     {
-      transform:  window.innerWidth > 769 ? "translateX(-50%) translateY(0%) scale(1)" : "translateX(-50%) translateY(50%) scale(1)",
+      transform:
+        window.innerWidth > 769
+          ? "translateX(-50%) translateY(0%) scale(1)"
+          : "translateX(-50%) translateY(50%) scale(1)",
       opacity: 1,
       duration: 2,
       ease: "power1.in",
@@ -85,7 +88,7 @@ $(window).on("load", function () {
       tl.to(".banner-1-bg", {
         duration: 1,
         backdropFilter: "blur(0px)",
-      })
+      });
     },
   });
 
@@ -166,34 +169,38 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
-  let isToggled = true;
-  const menuTl = gsap.timeline();
   $(window).on("load", function () {
+    const menuTl = gsap.timeline({ paused: true, reversed: true });
+
     // menu toggler
     $("#menu_toggler").click(function () {
       // alert("hi");
       $(".menu_line-1").toggleClass("menu_line-1_move");
       $(".menu_line-2").toggleClass("menu_line-2_move");
-      
 
-      if (isToggled) {
-        menuTl.to(
+      menuTl
+        .to(
           ".menu_toggler",
-          { width: window.innerWidth > 768 ? "500px" : "100%", duration: 0.5 },
+          {
+            width: window.innerWidth > 768 ? "500px" : "100%",
+            duration: 1,
+            ease: "power2.out",
+          },
           "+=0"
-        );
-        menuTl.to(".menu_toggler", {
-          delay: 0.2,
+        )
+        .to(".menu_toggler", {
           height: "400px",
-          duration: 0.5,
-        });
-        $(".menu-wrapper").addClass("menu-wrapper-active");
-        isToggled = false;
+          duration: 1,
+          ease: "power3.out",
+        })
+        .to(".menu-wrapper", {
+          opacity: 1,
+        },"-=1");
+
+      if (menuTl.reversed()) {
+        menuTl.play();
       } else {
-        $(".menu-wrapper").removeClass("menu-wrapper-active");
-        menuTl.to(".menu_toggler", { height: "54px", duration: 0.5 }, "+=0");
-        menuTl.to(".menu_toggler", { width: "auto", duration: 0.5 });
-        isToggled = true;
+        menuTl.reverse();
       }
     });
   });
