@@ -1203,6 +1203,10 @@ video {
     height: 100%;
   }
 
+  .md\:h-\[115vh\] {
+    height: 115vh;
+  }
+
   .md\:w-\[100\%\] {
     width: 100%;
   }
