@@ -52,12 +52,14 @@ $(window).on("load", function () {
     ".form-section",
     {
       opacity: 0,
+      filter: "blur(30px)"
     },
     {
       opacity: 1,
-      delay: 1,
+      delay: 2,
       duration: 2.5,
-      ease: "power2.inOut",
+       filter: "blur(0px)",
+      ease: "power1.inOut",
     }
   );
 
@@ -76,19 +78,27 @@ $(window).on("load", function () {
     opacity: 1,
   });
 
+  gsap.to(".banner-1-bg", {
+    duration: 1,
+    ease: "power3.inOut",
+    backdropFilter: "blur(0px)",
+  },"-=1");
+
   gsap.to(".preloader-wrapper", {
     delay: 0,
-    duration: 3,
+    duration: 2,
     opacity: 0,
     onComplete: function () {
       $(".preloader-wrapper").css("display", "none");
 
       const tl = gsap.timeline();
+      // tl.to(".banner-1-bg", {
+      //   duration: 1,
+      //   ease: "power1.inOut",
+      //   backdropFilter: "blur(0px)",
+      // },"-=2");
 
-      tl.to(".banner-1-bg", {
-        duration: 1,
-        backdropFilter: "blur(0px)",
-      });
+
     },
   });
 
@@ -205,6 +215,11 @@ $(document).ready(function () {
       }
     });
   });
+
+
+  $('#form-close').click(function(){
+    $('.form-section').css('display', "none")
+  })
 });
 
 // form validation

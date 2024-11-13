@@ -91,7 +91,7 @@
                 <!-- <img src="assets/img/ground.webp" alt="ground" class="hidden md:block">
                 <img src="assets/img/sm-ground.webp" alt="ground" class="block md:hidden"> -->
                 <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[70vh] md:h-[80vh]">
+                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
                         <div class="bg-green flex items-center gap-x-2 w-fit py-[15px] pl-[15px] pr-[50px]">
                             <div>
                                 <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[80%] md:w-[100%]">
@@ -172,7 +172,7 @@
         <section class="bg-image" style="background: url('./assets/img/shopiing.webp');">
             <div class="ground-wrapper">
                 <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[70vh] md:h-[80vh]">
+                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
                         <div class="bg-tomato flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
                             <div>
                                 <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
@@ -259,7 +259,7 @@
         <section class="bg-image" style="background: url('./assets/img/food-district.webp');">
             <div class="ground-wrapper">
                 <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[70vh] md:h-[80vh]">
+                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
                         <div class="bg-orange flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
                             <div>
                                 <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
@@ -339,7 +339,7 @@
         <section class="bg-image" style="background: url('./assets/img/the-club.webp');">
             <div class="ground-wrapper">
                 <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[70vh] md:h-[80vh]">
+                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
                         <div class="bg-blue flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
                             <div>
                                 <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
@@ -432,7 +432,7 @@
         <section class="bg-image" style="background: url('./assets/img/the-club.webp');">
             <div class="ground-wrapper">
                 <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[70vh] md:h-[80vh]">
+                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
                         <div class="bg-pink flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
                             <div>
                                 <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
@@ -620,25 +620,26 @@
     </main>
 
     <!-- form -->
-    <div class="form-section fixed bottom-10 left-[50%] transform -translate-x-1/2 z-[99] hidden">
+    <div class="form-section fixed top-[35%] lg:top-[90%] left-[50%]  transform lg:-translate-y-1/2 -translate-x-1/2 z-[9999] block">
         <div class="w-full  p-3 btn-bg   
-        !rounded-lg shadow-md">
-            <form class="flex gap-4" id="contactForm">
+        !rounded-lg shadow-md relative">
+        <div class="bg-black p-2 text-white block w-[40px] text-center mb-[1rem] ml-auto lg:hidden" id="form-close">X</div>
+            <form class="flex-col lg:flex lg:flex-row gap-4" id="contactForm">
 
                 <!-- Name Field -->
-                <div class="flex flex-col">
+                <div class="flex flex-col mb-3">
                     <input type="text" id="name" name="name" placeholder="Your Name"
                         class="px-4 py-2 rounded-md border">
                 </div>
 
                 <!-- Email Field -->
-                <div class="flex flex-col">
+                <div class="flex flex-col mb-3">
                     <input type="email" id="email" name="email" placeholder="Your Email"
                         class="px-4 py-2 rounded-md border">
                 </div>
 
                 <!-- Phone Field -->
-                <div class="flex flex-col">
+                <div class="flex flex-col mb-3">
                     <input type="tel" id="phone" name="phone" placeholder="Your Number"
                         class="px-4 py-2 rounded-md border">
                 </div>
