@@ -125,7 +125,7 @@ $(window).on("load", function () {
         start: "40% 35%",
         end: "bottom top",
         scrub: true, // Smooth transition linked to scroll
-        markers: true,
+        markers: false,
       },
     })
     .to(
