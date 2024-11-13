@@ -183,23 +183,25 @@ $(document).ready(function () {
           ".menu_toggler",
           {
             width: window.innerWidth > 768 ? "500px" : "100%",
-            // duration: 1,
-            // ease: "power2.out",
+            duration: window.innerWidth > 768 ? 1 : "0.5",
+            ease: window.innerWidth > 768 ? "power2.out" : "none",
           },
-          "+=0"
+          "start"
         )
         .to(".menu_toggler", {
           height: "400px",
-          // duration: 1,
-          // ease: "power3.out",
+          duration: 1,
+          duration: window.innerWidth > 768 ? 1 : "0.5",
+          ease: window.innerWidth > 768 ? "power3.out" : "none",
         })
         .to(".menu-wrapper", {
           opacity: 1,
-        },"-=1");
+        },"start");
 
       if (menuTl.reversed()) {
         menuTl.play();
       } else {
+        gsap.to(".menu-wrapper", { opacity: 0, duration: 0 });
         menuTl.reverse();
       }
     });
