@@ -634,6 +634,10 @@ video {
   z-index: 9999;
 }
 
+.z-\[999999\] {
+  z-index: 999999;
+}
+
 .float-right {
   float: right;
 }
