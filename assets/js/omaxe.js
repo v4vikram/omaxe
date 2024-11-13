@@ -1,13 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
+let lenisInstance = null; 
 function lenisScroll() {
-  const lenisInstance = new Lenis({
-    duration: 1.4,  // Slightly longer duration for smoother scrolling
-    easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
-    smoothWheel: true,  // Enable smooth wheel scrolling
-    smoothTouch: true,  // Enable smooth touch scrolling (for mobile/tablet)
-  });
+  if(!lenisInstance){
+    lenisInstance = new Lenis({
+      duration: 1.4,  // Slightly longer duration for smoother scrolling
+      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)), // Easing for smoothness
+      smoothWheel: true,  // Enable smooth wheel scrolling
+      smoothTouch: false,  // Enable smooth touch scrolling (for mobile/tablet)
+    });
+  }
+
 
   // Start the scroll animation loop (RAF = Request Animation Frame)
   function raf(time) {
@@ -37,6 +40,17 @@ window.addEventListener('resize', () => {
 $(document).ready(function () {
   $(window).on("load", function () {
 
+    gsap.to(
+      ".logo-2",
+      {
+        transform: "translateX(-50%) translateY(0%) scale(1)",
+        opacity: 1,
+        duration:2,
+        ease: "power1.in",
+      },
+      "<"
+    )
+
     gsap.fromTo(".form-section", {
       opacity:0,
      },{
@@ -52,6 +66,13 @@ $(document).ready(function () {
      duration:2.5,
      ease: "power2.inOut",
     });
+
+   gsap.to(".fade",{
+    delay:1,
+       duration:2.5,
+     ease: "power2.inOut",
+      opacity: 1,
+    })
 
     gsap.to(".preloader-wrapper", {
       delay: 0,
@@ -76,13 +97,6 @@ $(document).ready(function () {
             },
             "<"
           )
-          .to(
-            ".fade",
-            {
-              opacity: 1,
-            },
-            "-=1.5"
-          );
       },
     });
 
