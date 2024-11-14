@@ -274,6 +274,11 @@ input:focus-visible {
 .ground-bg::after {
 display: none;
 }
+
+.green-box {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 }
 
 @media (max-width: 425px) {
