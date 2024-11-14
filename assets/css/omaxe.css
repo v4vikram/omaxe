@@ -149,7 +149,7 @@ input:focus-visible {
   opacity: 1;
 }
 .menu-wrapper a {
-    font-size: 35px;
+    font-size: 30px;
     color: var(--black);
 }
 

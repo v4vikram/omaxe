@@ -118,6 +118,11 @@ $(window).on("load", function () {
     });
 
   // Apply scroll-triggered blur effect on .banner-1-bg
+  $('.home-link').click(function(){
+    gsap.to(
+      ".banner-1-bg",
+      { backdropFilter: "blur(0px)" })
+  })
   gsap
     .timeline({
       scrollTrigger: {
@@ -131,6 +136,20 @@ $(window).on("load", function () {
     .to(
       ".banner-1-bg",
       { backdropFilter: "blur(30px)" } // End with blur
+    );
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#contactSection",
+        start: "top 80%",
+        end: "bottom top",
+        scrub: true, // Smooth transition linked to scroll
+        markers: false,
+      },
+    })
+    .to(
+      ".form-section",
+      { opacity: 0 } // End with blur
     );
 
   gsap
@@ -225,6 +244,69 @@ $(document).ready(function () {
 // form validation
 $(document).ready(function () {
   $("#contactForm").validate({
+    highlight: function (element) {
+      console.log($(element));
+      $(element).addClass("border-red-500"); // Add red border on error
+    },
+    unhighlight: function (element) {
+      $(element).removeClass("border-red-500").addClass("border-gray-300"); // Remove red border when valid
+    },
+    rules: {
+      name: {
+        required: true,
+        minlength: 3,
+      },
+      phone: {
+        required: true,
+        digits: true,
+        minlength: 10,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      name: {
+        required: "Required",
+        minlength: "At least 3 characters",
+      },
+      phone: {
+        required: "Required",
+        digits: "Use only digits",
+        minlength: "Must be at least 10 digits",
+      },
+      email: {
+        required: "Required",
+        email: "Enter valid email",
+      },
+    },
+    submitHandler: function (form, event) {
+      event.preventDefault(); // Prevent form from reloading the page
+      $.ajax({
+        url: ajax_object.ajax_url, // Properly referencing ajax_object.ajax_url
+        type: "POST",
+        data: {
+          name: $("#name").val(),
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          action: "send_contact_form", // The action to trigger in PHP
+        },
+        success: function (response) {
+          $("#formResponse").html(
+            '<p class="bg-yellow text-green py-3 px-4 mt-3 rounded-full text-center">Message sent successfully!</p>'
+          );
+          $("#contactForm")[0].reset();
+        },
+        error: function (error) {
+          $("#formResponse").html(
+            '<p class="text-red-500">Error sending message. Please try again.</p>'
+          );
+        },
+      });
+    },
+  });
+  $("#contactFormFooter").validate({
     highlight: function (element) {
       console.log($(element));
       $(element).addClass("border-red-500"); // Add red border on error
