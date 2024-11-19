@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
   },
-  "keywords": [],
+  "keywords": [],"capabilities": {},
   "author": "",
   "license": "ISC",
   "description": "",

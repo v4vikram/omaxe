@@ -642,30 +642,6 @@ video {
   z-index: 99;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
-
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -708,6 +684,14 @@ video {
   margin-left: auto;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-\[0vh\] {
   margin-top: 0vh;
 }
@@ -716,28 +700,16 @@ video {
   margin-top: 10px;
 }
 
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
 .mt-\[25px\] {
   margin-top: 25px;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-\[35px\] {
   margin-top: 35px;
-}
-
-.mt-\[15px\] {
-  margin-top: 15px;
 }
 
 .block {
@@ -781,6 +753,10 @@ video {
   max-height: fit-content;
 }
 
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[2px\] {
   width: 2px;
 }
@@ -812,10 +788,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[150px\] {
-  width: 150px;
 }
 
 .max-w-\[1300px\] {
@@ -851,10 +823,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
@@ -871,10 +839,6 @@ video {
   justify-content: center;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
 .gap-4 {
   gap: 1rem;
 }
@@ -886,11 +850,6 @@ video {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-x-24 {
-  -moz-column-gap: 6rem;
-       column-gap: 6rem;
 }
 
 .overflow-hidden {
@@ -973,13 +932,13 @@ video {
   background-color: rgb(229 28 36 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
 }
 
 .object-cover {
@@ -1010,6 +969,11 @@ video {
   padding-bottom: 15px;
 }
 
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .py-\[40px\] {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1018,26 +982,6 @@ video {
 .py-\[70px\] {
   padding-top: 70px;
   padding-bottom: 70px;
-}
-
-.py-\[100px\] {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.py-\[50px\] {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-\[25px\] {
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .pl-\[15px\] {
@@ -1060,20 +1004,8 @@ video {
   padding-right: 70px;
 }
 
-.pl-\[10vh\] {
-  padding-left: 10vh;
-}
-
 .pt-\[50px\] {
   padding-top: 50px;
-}
-
-.pt-\[40px\] {
-  padding-top: 40px;
-}
-
-.pb-\[20px\] {
-  padding-bottom: 20px;
 }
 
 .text-center {
@@ -1124,20 +1056,21 @@ video {
   text-transform: uppercase;
 }
 
-.leading-\[20px\] {
-  line-height: 20px;
-}
-
 .leading-\[25px\] {
   line-height: 25px;
+}
+
+.leading-\[27px\] {
+  line-height: 27px;
 }
 
 .leading-\[30px\] {
   line-height: 30px;
 }
 
-.leading-\[27px\] {
-  line-height: 27px;
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-blue {
@@ -1163,11 +1096,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -1323,11 +1251,11 @@ video {
     margin-bottom: 40px;
   }
 
-  .md\:mt-\[0px\] {
+  .md\:mt-0 {
     margin-top: 0px;
   }
 
-  .md\:mt-0 {
+  .md\:mt-\[0px\] {
     margin-top: 0px;
   }
 
@@ -1339,8 +1267,8 @@ video {
     display: none;
   }
 
-  .md\:h-\[115vh\] {
-    height: 115vh;
+  .md\:h-\[118vh\] {
+    height: 118vh;
   }
 
   .md\:h-\[80vh\] {
@@ -1387,10 +1315,6 @@ video {
 
   .md\:pt-\[100px\] {
     padding-top: 100px;
-  }
-
-  .md\:pb-\[0px\] {
-    padding-bottom: 0px;
   }
 
   .md\:text-\[30px\] {
@@ -1509,7 +1433,7 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:h-\[120vh\] {
-    height: 120vh;
+  .\32xl\:h-\[133vh\] {
+    height: 133vh;
   }
 }
