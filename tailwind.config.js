@@ -9,18 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: "#00a052",
-        tomato:"#e51c24",
-        orange:"#ef8121",
-        blue:"#2e9add",
-        lightBlue:"#e0f3fe",
-        pink: "#e30479",
-        lightPink:"#fde8e8",
-        darkGray:"#0d0e12",
-        brown:"#857176"
+        goldLight: "#c1a860",
+        goldDark: "#cf9936",
+        darkGray: "#0d0d0d",
       },
       screens: {
-        '3xl': '1920px',
+        "3xl": "1920px",
       },
       fontSize: {
         p: "18px",
@@ -37,7 +31,6 @@ module.exports = {
       fontFamily: {
         avianoSans: ["aviano-sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
-
       },
       display: {
         // unset: "unset",

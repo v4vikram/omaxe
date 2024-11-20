@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Omaxe</title>
-    <!-- Owl.css -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/qkt4glp.css">
+    <!-- swiper.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- Font Awesome.css -->
@@ -19,876 +15,124 @@
 
     <!-- Output.css -->
     <link href="assets/css/output.css" rel="stylesheet">
-    <!-- Omaxe.css -->
-    <link rel="stylesheet" href="assets/css/omaxe.css">
+    <!-- mvn.css -->
+    <link rel="stylesheet" href="assets/css/mvn.css">
 </head>
 
-<body class="font-avianoSans font-normal">
-    <!-- Header -->
-    <!-- <header>
-        <h1 class="h2">Header</h1>
-    </header> -->
-
+<body class="body-bg font-montserrat font-normal">
     <main>
-        <!-- preloader -->
-        <div class="preloader-wrapper">
-        </div>
-        <!-- nav -->
-        <div class="nav-fixed">
-            <div class="w-[90%] mx-auto relative z-[99]">
-                <div class="logo absolute left-0 fade">
-                    <a href="#">
-                        <img src="assets/img/logo.webp" alt="logo" class="w-[50%] md:w-[50%]">
-                    </a>
-                </div>
-                <div class="fade  absolute right-0 w-full">
-                    <div class="menu_toggler relative float-right">
-
-
-                        <span class="btn-1 btn-1-custom  !flex items-center gap-x-2 relative z-[999999]"
-                            id="menu_toggler">
-                            <div class="menu_lines_wrapper">
-                                <span class="menu_lines menu_line-1"></span>
-                                <span class="menu_lines menu_line-2"></span>
-                            </div>
-                            Menu
-                        </span>
-
-                        <div class="menu-wrapper">
-                            <a href="#homeSection" class="uppercase home-link">Home</a>
-                            <a href="#sportSection" class="uppercase">THE SPORTS</a>
-                            <a href="#shoppingSection" class="uppercase">THE SHOPPING</a>
-                            <a href="#foodSection" class="uppercase">The Food</a>
-                            <a href="#hospitalitySection" class="uppercase">The Hospitality</a>
-                            <a href="#socialSection" class="uppercase">The Social</a>
-                            <a href="#contactSection" class="uppercase">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- section 1 -->
-        <section class="banner h-full md:h-[118vh] 2xl:h-[133vh] overflow-hidden" id="homeSection">
-            <div class="banner-1-bg"></div>
-            <img src="assets/img/banner-1-long.webp" alt="banner-1"
-                class="banner-1 h-screen. w-full max-h-fit z-0 hidden md:block">
-            <img src="assets/img/banner-1-sm.webp" alt="banner-1"
-                class="banner-1 h-screen. w-full max-h-fit z-0 block md:hidden">
-            <div class="logo-2">
-                <img src="assets/img/omaxe-logo-2.webp" alt="omaxe-logo-2" class="logo-2.">
+        <section>
+            <div class="container text-center mb-10 mt-14">
+                <span class="sub-heading text-gradient">Presenting</span>
+                <h1 class="h1 text-gradient">mvn mall</h1>
             </div>
-
+            <img src="assets/img/banner.webp" alt="banner">
         </section>
-
         <!-- section 2 -->
-        <section class="ground-section overflow-hidden bg-brown">
-            <div class="ground-wrapper ground-bg">
-                <img src="assets/img/ground-2.webp" alt="ground-2"
-                    class="ground-2 first:w-[230%] max-w-[230%] h-screen object-cover mt-[0vh]">
-                <div class="container">
-                    <div class="collection-text">
-                        <h1>With 5 District</h1>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- section 3 -->
-        <section class="bg-image relative" style="background: url('./assets/img/ground.webp');" id="sportSection">
-            <div class="ground-wrapper">
-
-                <!-- <img src="assets/img/ground.webp" alt="ground" class="hidden md:block">
-                <img src="assets/img/sm-ground.webp" alt="ground" class="block md:hidden"> -->
-                <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
-                        <div class="bg-green flex items-center gap-x-2 w-fit py-[15px] pl-[15px] pr-[50px]">
-                            <div>
-                                <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[80%] md:w-[100%]">
-
-                            </div>
-                            <h2
-                                class="font-avianoSans text-[25px] leading-[30px] md:text-[30px] md:leading-[35px] lg:text-[35px] lg:leading-[45px] text-white">
-                                THE SPORTS<br>
-                                DISTRICT</h2>
-                        </div>
-                        <h2
-                            class="font-avianoSans  text-white mt-[25px] text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] lg:text-[45px] lg:leading-[45px]">
-                            THE LOUDEST<br>
-                            CHEERS FOR<br>
-                            BIGGEST SPORTSMEN</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 4 -->
-        <!-- large -->
-        <section class="hidden lg:block">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/vr-glasses.webp" alt="vr-glasses">
-                    </div>
-                    <div class="green-box">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                An
-                            </span>
-                            <h2 class="lg-font text-white">Olympic Size</h2>
-                            <p class="text-white lg-thin-font">Swimming Pool</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">2000 Seater</h2>
-                            <p class="text-white lg-thin-font">International Multi-Sport Indoor Stadium</p>
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/fifa.webp" alt="fifa" class="hidden md:block">
-
-                    </div>
-                    <div class="green-box">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                (6967.72 Sq. Mtr)
-                            </span>
-                            <h2 class="lg-font text-white">75,000 <small class="text-[30px]">Sq. Ft.</small></h2>
-                            <p class="text-white lg-thin-font">E-Sports Zone For All Age Groups</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]"> Courts for</h2>
-                            <p class="text-white lg-thin-font"> Volleyball, Futsal, Tennis, Basketball, Squash and Much
-                                More…</p>
-                        </div>
-                    </div>
-
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/pool.webp" alt="pool" class="md:h-full lg:h-auto">
-                    </div>
-                    <div>
-                        <img src="assets/img/fifa.webp" alt="fifa" class="block md:hidden">
-                        <div class="green-box md:h-full">
-                            <div class="max-w-[455px]">
-                                <h2 class="lg-font text-white">ICC & FIFA Standard</h2>
-                                <p class="text-white lg-thin-font">Standard</p>
-
-                                <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">30,000 Seater</h2>
-                                <p class="text-white lg-thin-font">International Cricket And Football Stadium</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- small -->
-        <section class="block lg:hidden">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/vr-glasses.webp" alt="vr-glasses">
-                    </div>
-                    <div class="green-box">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                (6967.72 Sq. Mtr)
-                            </span>
-                            <h2 class="lg-font text-white">75,000 <small class="text-[30px]">Sq. Ft.</small></h2>
-                            <p class="text-white lg-thin-font">E-Sports Zone For All Age Groups</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]"> Courts for</h2>
-                            <p class="text-white lg-thin-font"> Volleyball, Futsal, Tennis, Basketball, Squash and Much
-                                More…</p>
-                        </div>
-                    </div>
-
-
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/pool.webp" alt="pool" class="md:h-full lg:h-auto">
-                    </div>
-                    <div class="green-box">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                An
-                            </span>
-                            <h2 class="lg-font text-white">Olympic Size</h2>
-                            <p class="text-white lg-thin-font">Swimming Pool</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">2000 Seater</h2>
-                            <p class="text-white lg-thin-font">International Multi-Sport Indoor Stadium</p>
-                        </div>
-                    </div>
-
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/fifa.webp" alt="fifa" class="hidden md:block">
-
-                    </div>
-
-                    <div>
-                        <img src="assets/img/fifa.webp" alt="fifa" class="block md:hidden">
-                        <div class="green-box md:h-full">
-                            <div class="max-w-[455px]">
-                                <h2 class="lg-font text-white">ICC & FIFA Standard</h2>
-                                <p class="text-white lg-thin-font">Standard</p>
-
-                                <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">30,000 Seater</h2>
-                                <p class="text-white lg-thin-font">International Cricket And Football Stadium</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- section 5 -->
-        <section class="bg-image" style="background: url('./assets/img/shopiing.webp');" id="shoppingSection">
-            <div class="ground-wrapper">
-                <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
-                        <div class="bg-tomato flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
-                            <div>
-                                <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
-
-                            </div>
-                            <h2
-                                class="font-avianoSans text-[25px] leading-[30px] md:text-[30px] md:leading-[35px] lg:text-[35px] lg:leading-[45px] text-white">
-                                THE SHOPPING<br>
-                                DISTRICT</h2>
-                        </div>
-                        <h2
-                            class="font-avianoSans  text-white mt-[25px] text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] lg:text-[45px] lg:leading-[45px]">
-                            DELHIITE'S SHOPPING<br>
-                            ENCHANCED WITH<br>
-                            UNLIMITED CHOICES</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 6 -->
-        <section>
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-2">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/street.webp" alt="street">
-                    </div>
-                    <div class="green-box !bg-lightPink">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-tomato">India's First</h2>
-                            <span class="text-darkGray lg-thin-font">
-                                Air-Conditioned Hi-Street
-                            </span>
-
-
-                            <h2 class="lg-font text-tomato mt-[25px] lg:mt-[50px]">G+1 Floors</h2>
-                            <span class="text-darkGray lg-thin-font">
-                                Of Premium Shopping
-                            </span>
-                            <h2 class="lg-font text-tomato mt-[25px] lg:mt-[50px]">4.2 Kilometers</h2>
-                            <span class="text-darkGray lg-thin-font">
-                                Shop Frontage On
-                                Ground & First Floor
-                            </span>
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/multiplex.webp" alt="multiplex" class="block md:hidden">
-                        <div class="green-box !bg-lightPink md:h-full">
-                            <div class="max-w-[455px]">
-                                <h2 class="lg-font text-tomato">75% Retail</h2>
-                                <span class="text-darkGray lg-thin-font">
-                                    On Ground Floor
-                                </span>
-
-                                <span class="text-darkGray lg-thin-font mt-[25px] lg:mt-[50px] block">
-                                    Impressive Shop Heights Of
-                                </span>
-                                <h2 class="lg-font text-tomato">18 Ft. & 36 Ft.</h2>
-                                <span class="text-darkGray font-semibold font-montserrat text-[20px] block">
-                                    (5.48 Mtr. & 10.97 Mtr.)
-                                </span>
-
-                                <span class="text-darkGray lg-thin-font mt-[25px] lg:mt-[50px] block">
-                                    Extravagant
-                                </span>
-                                <h2 class="lg-font text-tomato">5-Screen
-                                    Multiplex</h2>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="assets/img/multiplex.webp" alt="multiplex" class="hidden md:block">
-                    </div>
-
-
-                </div>
-            </div>
-
-        </section>
-
-        <!-- section 7 -->
-        <section class="bg-image" style="background: url('./assets/img/food-district.webp');" id="foodSection">
-            <div class="ground-wrapper">
-                <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
-                        <div class="bg-orange flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
-                            <div>
-                                <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
-
-                            </div>
-                            <h2
-                                class="font-avianoSans uppercase text-[25px] leading-[30px] md:text-[30px] md:leading-[35px] lg:text-[35px] lg:leading-[45px] text-white ">
-                                The Food<br>
-                                District</h2>
-                        </div>
-                        <h2
-                            class="font-avianoSans uppercase text-white mt-[25px] text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] lg:text-[45px] lg:leading-[45px]">
-                            Global Culinary Gem<br>
-                            Posed to be Delhi's SOHO</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 8 -->
-
-        <!-- large -->
-        <section class="hidden lg:block">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/restaurant.webp" alt="restaurant">
-                    </div>
-                    <div>
-                        <img src="assets/img/food.webp" alt="food" class="block md:hidden">
-                        <div class="green-box !bg-orange md:h-full">
-                            <div class="max-w-[455px]">
-                                <span class="text-white font-semibold font-montserrat text-[20px]">
-                                    (46451.52 Sq. Mtr.)
-                                </span>
-
-                                <p class="text-white lg-thin-font">India's Largest Food District</p>
-                                <h2 class="lg-font text-white">500,000</h2>
-
-                                <small class="lg-font !text-[30px] text-white">Sq. Ft.</small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/cuisines.webp" alt="cuisines">
-                    </div>
-                    <div class="green-box !bg-orange">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-white">40+</h2>
-                            <p class="text-white lg-thin-font">Restaurants, Lounges, Night-Clubs and Bars</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">3 Convenient</h2>
-                            <p class="text-white lg-thin-font">Drive-Throughs</p>
-                        </div>
-                    </div>
-
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/food.webp" alt="food" class="hidden md:block">
-                    </div>
-                    <div class="green-box !bg-orange">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                Serving
-                            </span>
-                            <h2 class="lg-font text-white">Local & International</h2>
-                            <p class="text-white lg-thin-font">Cuisines</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">Diverse Food Choices</h2>
-                            <p class="text-white lg-thin-font">Food Trucks, Kiosks & Cafés</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- small -->
-        <section class="block lg:hidden">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/restaurant.webp" alt="restaurant">
-                    </div>
-                    <div class="green-box !bg-orange">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-white">40+</h2>
-                            <p class="text-white lg-thin-font">Restaurants, Lounges, Night-Clubs and Bars</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">3 Convenient</h2>
-                            <p class="text-white lg-thin-font">Drive-Throughs</p>
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/food.webp" alt="food" class="">
-                    </div>
-                    <div>
-                        <div class="green-box !bg-orange md:h-full">
-                            <div class="max-w-[455px]">
-                                <span class="text-white font-semibold font-montserrat text-[20px]">
-                                    (46451.52 Sq. Mtr.)
-                                </span>
-
-                                <p class="text-white lg-thin-font">India's Largest Food District</p>
-                                <h2 class="lg-font text-white mt-2">500,000</h2>
-
-                                <small class="lg-font !text-[30px] text-white mt-2 block">Sq. Ft.</small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/cuisines.webp" alt="cuisines">
-                    </div>
-
-                    <div class="green-box !bg-orange">
-                        <div class="max-w-[455px]">
-                            <span class="text-white font-semibold font-montserrat text-[20px]">
-                                Serving
-                            </span>
-                            <h2 class="lg-font text-white">Local & International</h2>
-                            <p class="text-white lg-thin-font">Cuisines</p>
-
-                            <h2 class="lg-font text-white mt-[25px] lg:mt-[50px]">Diverse Food Choices</h2>
-                            <p class="text-white lg-thin-font">Food Trucks, Kiosks & Cafés</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- section 9 -->
-        <section class="bg-image" style="background: url('./assets/img/the-club.webp');" id="hospitalitySection">
-            <div class="ground-wrapper">
-                <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
-                        <div class="bg-blue flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
-                            <div>
-                                <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
-
-                            </div>
-                            <h2
-                                class="font-avianoSans uppercase text-[25px] leading-[30px] md:text-[30px] md:leading-[35px] lg:text-[35px] lg:leading-[45px] text-white ">
-                                The Hospitality<br>
-                                District</h2>
-                        </div>
-                        <h2
-                            class="font-avianoSans uppercase text-white mt-[25px] text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] lg:text-[45px] lg:leading-[45px]">
-                            Delhi's Most Elite<br>
-                            Sports Cum Leisure<br>
-                            Club & Hotel</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 10 -->
-        <!-- large -->
-        <section class="hidden lg:block">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/facilites.webp" alt="facilites">
-                    </div>
-                    <div class="green-box !bg-lightBlue">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-blue">2 Banquet Halls</h2>
-                            <span class="text-darkGray lg-thin-font">
-                                With A Capacity Of
-                                1500 Pax Each
-                            </span>
-
-                            <h2 class="lg-font text-blue mt-[25px] lg:mt-[50px] ">3 Gymnasiums</h2>
-                            <span class="text-darkGray lg-thin-font block">
-                                with State-Of-The-Art
-                                Facilities
-                            </span>
-
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/club.webp" alt="club" class="hidden md:block">
-                    </div>
-                    <div class="green-box !bg-lightBlue">
-                        <div class="max-w-[455px]">
-                            <span class="text-darkGray lg-thin-font">
-                                Invite Only Club with
-                            </span>
-                            <h2 class="lg-font text-blue">Multi-Sport
-                                Facilities</h2>
-
-                            <span class="text-darkGray lg-thin-font mt-[25px] lg:mt-[50px] block">
-                                Breathtaking
-                            </span>
-                            <h2 class="lg-font text-blue">Luxury
-                                Rooms</h2>
-                        </div>
-                    </div>
-
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/gym.webp" alt="gym">
-                    </div>
-                    <div class="green-box !bg-lightBlue md:h-full">
-                        <div class="max-w-[455px]">
-                            <span class="text-darkGray lg-thin-font">
-                                Party Lawns With
-                                A Capacity To Accommodate
-                            </span>
-                            <h2 class="lg-font text-blue">Multi-Sport
-                                2000 Pax</h2>
-
-                            <h2 class="lg-font text-blue mt-[25px] lg:mt-[50px]">Leisure Club</h2>
-                            <span class="text-darkGray lg-thin-font block">
-                                Managed By World Renowned
-                                Hospitality Brand
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- small -->
-        <section class="block lg:hidden">
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
-                    <div>
-                        <img src="assets/img/facilites.webp" alt="facilites">
-                    </div>
-                    <div class="green-box !bg-lightBlue">
-                        <div class="max-w-[455px]">
-                            <span class="text-darkGray lg-thin-font">
-                                Invite Only Club with
-                            </span>
-                            <h2 class="lg-font text-blue">Multi-Sport
-                                Facilities</h2>
-
-                            <span class="text-darkGray lg-thin-font mt-[25px] lg:mt-[50px] block">
-                                Breathtaking
-                            </span>
-                            <h2 class="lg-font text-blue">Luxury
-                                Rooms</h2>
-                        </div>
-                    </div>
-                    <!-- 2nd -->
-                    <div>
-                        <img src="assets/img/gym.webp" alt="gym">
-                    </div>
-                    <div class="green-box !bg-lightBlue">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-blue">2 Banquet Halls</h2>
-                            <span class="text-darkGray lg-thin-font">
-                                With A Capacity Of
-                                1500 Pax Each
-                            </span>
-
-                            <h2 class="lg-font text-blue mt-[25px] lg:mt-[50px] ">3 Gymnasiums</h2>
-                            <span class="text-darkGray lg-thin-font block">
-                                with State-Of-The-Art
-                                Facilities
-                            </span>
-
-                        </div>
-                    </div>
-                    <!-- 3rd -->
-                    <div>
-                        <img src="assets/img/club.webp" alt="club" class="">
-                    </div>
-                    <div class="green-box !bg-lightBlue md:h-full">
-                        <div class="max-w-[455px]">
-                            <span class="text-darkGray lg-thin-font">
-                                Party Lawns With
-                                A Capacity To Accommodate
-                            </span>
-                            <h2 class="lg-font text-blue">Multi-Sport
-                                2000 Pax</h2>
-
-                            <h2 class="lg-font text-blue mt-[25px] lg:mt-[50px]">Leisure Club</h2>
-                            <span class="text-darkGray lg-thin-font block">
-                                Managed By World Renowned
-                                Hospitality Brand
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- section 11 -->
-        <section class="bg-image" style="background: url('./assets/img/the-club.webp');" id="socialSection">
-            <div class="ground-wrapper">
-                <div class="container">
-                    <div class="ground-content flex flex-col justify-center  h-[50vh] md:h-[80vh]">
-                        <div class="bg-pink flex items-center w-fit py-[15px] pl-[15px] pr-[70px]">
-                            <div>
-                                <img src="assets/img/shape-1.webp" alt="shape-1" class="w-[75%]">
-
-                            </div>
-                            <h2
-                                class="font-avianoSans uppercase text-[25px] leading-[30px] md:text-[30px] md:leading-[35px] lg:text-[35px] lg:leading-[45px] text-white ">
-                                The Social<br>
-                                District</h2>
-                        </div>
-                        <h2
-                            class="font-avianoSans uppercase text-white mt-[25px] text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] lg:text-[45px] lg:leading-[45px]">
-                            The Largest Arena<br>
-                            Hosting a<br>
-                            world of culture</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 12 -->
-        <section class="bg-lightPink py-[70px] md:py-[100px]">
-            <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 md:gap-y-0">
-                <div class="text-center relative">
-                    <!-- <div class="absolute right-0 top-0 h-full w-[2px] bg-black"></div> -->
-                    <span class="text-darkGray lg-thin-font">
-                        Capacity To Host
-                        Musical Concerts
-                        And Events
+         <section class="relative w-full h-screen">
+            <div class="container text-center pb-10 pt-20">
+                <span class="sub-heading text-gradient !lowercase block mb-3">3<sup class="sub-heading text-gradient !lowercase !text-[20px] required: top-[-18px]">rd</sup> and 4<sup class="sub-heading text-gradient !lowercase !text-[20px] required: top-[-18px]">th</sup>
+                   <span class="uppercase">Floor</span>
+                </span>
+                <h2 class="h1 text-gradient">The<br> Upper Crest</h2>
+
+                <div class="custom-border mt-10 mx-auto md:w-[75%] lg:w-[50%]">
+                    <div class="border-top-line"></div>
+                    <span class="text-gradient text-[30px] leading-[50px] font-thin uppercase">
+                        Crown jewel of mnv mall
                     </span>
-                    <h2 class="text-pink font-extrabold text-[25px] leading-[27px] mt-[10px]">100,000 Pax</h2>
-                </div>
-                <div class="text-center relative">
-                    <!-- <div class="absolute right-0 top-0 h-full w-[2px] bg-black"></div> -->
-                    <span class="text-darkGray lg-thin-font">
-                        Vibrant Venue For
-                    </span>
-                    <h2 class="text-pink font-extrabold text-[25px] leading-[27px] mt-[10px]">Art Exhibitions,
-                        Cultural Festivals &
-                        Social Gatherings</h2>
-                </div>
-                <div class="text-center relative">
-                    <span class="text-darkGray lg-thin-font">
-                        A Social Arena That Hosts
-                        Up To
-                    </span>
-                    <h2 class="text-pink font-extrabold text-[25px] leading-[27px] mt-[10px]">10,000 Guests</h2>
-                </div>
-                <div class="text-center relative">
-                    <span class="text-darkGray lg-thin-font">
-                        Showcasing Kiosks,
-                    </span>
-                    <h2 class="text-pink font-extrabold text-[25px] leading-[27px] mt-[10px]">Fountains,
-                        & Giant Screens</h2>
+                    <div class="border-bottom-line"></div>
                 </div>
             </div>
-        </section>
+            <img src="assets/img/crown2.webp" alt="crown2" class="absolute left-0 top-0 z-[-1]">
+         </section>
 
-        <!-- section 13  -->
-        <section>
-            <img src="assets/img/concerts.webp" alt="concerts" class="w-full">
-        </section>
+         <!-- section 3 -->
+          <section class="pb-20">
+            <div class="container text-center">
+                <h2 class="h1 text-gradient !text-[40px] !leading-[40px] mt-20 mb-12">THE UPPER CREST WILL BE A VIBRANT HUB OF ENTERTAINMENT AND DIVERSE ATTRACTIONS</h2>
 
-        <!-- section 14 -->
-        <section>
-            <div class="container my-[60px] md:my-[50px] lg:my-[100px]">
-                <div class="text-center mb-[20px] md:mb-[40px]">
-                    <h2
-                        class="font-avianoSans uppercase text-darkGray mt-[25px] text-[25px] leading-[30px] md:text-[30px] md:leading-[35px]">
-                        The New Retail Destination For</h2>
-                    <span class="text-darkGray lg-thin-font">
-                        <strong>
-                            Delhi's 3.3 Crore Population
-                        </strong>
-                    </span>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Column 1 -->
-                    <div class="flex flex-col h-full mt-[25px] lg:mt-[0px]">
-                        <h3 class="text-tomato text-[25px] xl:text-[20px] leading-[25px] font-extrabold">IN PROXIMITY TO
-                        </h3>
-                        <div class="bg-tomato pl-[25px] py-[40px] mt-[15px] lg:mt-[20px] flex-1">
-                            <ul class="list-disc pl-[20px]">
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">South Delhi</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">West Delhi</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Gurgaon</li>
-                                <li class="text-white text-[18px] mb-[0px] font-semibold">IGI Airport</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Column 2 -->
-                    <div class="flex flex-col h-full mt-[25px] lg:mt-[0px]">
-                        <h3
-                            class="text-tomato text-[25px] mt-[35px] md:mt-[0px] xl:text-[20px] leading-[25px] font-extrabold">
-                            EASE OF ACCESS
-                            WITH</h3>
-                        <div class="bg-tomato pl-[25px] py-[40px] mt-[15px] lg:mt-[20px] flex-1">
-                            <ul class="list-disc pl-[20px]">
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Prime 3-Sided Road Approach
-                                </li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">2 Roads Measuring 100 Ft</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">1 Road Measuring 200 Ft.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div class="flex flex-col h-full mt-[25px] lg:mt-[0px]">
-                        <h3
-                            class="text-tomato text-[25px] mt-[35px] md:mt-[0px] xl:text-[20px] leading-[25px] font-extrabold">
-                            ATTRACTING
-                            FOOTFALL FROM</h3>
-                        <div class="bg-tomato pl-[25px] py-[40px] mt-[15px] lg:mt-[20px] flex-1">
-                            <ul class="list-disc pl-[20px]">
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Bharat Vandana Park</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Yashobhoomi (IICC)</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Golf Course</li>
-                                <li class="text-white text-[18px] mb-[15px] font-semibold">Diplomatic Enclave</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- section 15 -->
-        <section>
-            <div class="xl-3-container">
-                <div class="grid md:grid-cols-3">
-                    <!-- 1st -->
+                <div class="grid grid-cols-3 gap-8">
                     <div>
-                        <img src="assets/img/construction.webp" alt="construction" class="md:h-full">
+                        <img src="assets/img/variant-cart-1.webp" alt="variant-cart-1">
                     </div>
-                    <div class="green-box !bg-blue md:h-full">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-white xl:!text-[27px] xl:!leading-[30px]">A Public Listed Company
-                            </h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                ISO 9001:2000
-                                Certified Company</h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                Receiver Of National &
-                                International Awards
-                                For Various Achievements</h2>
-
-                        </div>
-                    </div>
-                    <!-- 2nd -->
                     <div>
-                        <img src="assets/img/delivered.webp" alt="delivered" class="md:h-full">
+                        <img src="assets/img/variant-cart-2.webp" alt="variant-cart-2">
                     </div>
-                    <div class="green-box !bg-blue">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-white block xl:!text-[27px] xl:!leading-[30px]">Being Trusted for
-                                Over 37 Years</h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                Completed Over
-                                289 Projects
-                                & 79 Projects Under
-                                Construction</h2>
-                        </div>
-                    </div>
-
-                    <!-- 3rd -->
                     <div>
-                        <img src="assets/img/company.webp" alt="company" class="md:h-full">
-                    </div>
-                    <div class="green-box !bg-blue">
-                        <div class="max-w-[455px]">
-                            <h2 class="lg-font text-white xl:!text-[27px] xl:!leading-[30px]">Delivered Over</h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                135.84 Million Sq. Ft.
-                                (12.62 Sq. Mtr.)</h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                Built Over
-                                85,000 Homes</h2>
-                            <h2
-                                class="lg-font text-white mt-[25px] lg:mt-[25px] block xl:!text-[27px] xl:!leading-[30px]">
-                                Spread Over
-                                5 Lakh Smiles</h2>
-                        </div>
+                        <img src="assets/img/variant-cart-3.webp" alt="variant-cart-3">
                     </div>
                 </div>
             </div>
+           
+          </section>
 
-        </section>
+          <!-- section 4 -->
+           <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/img/slider-1.webp" alt="slider-1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/slider-2.webp" alt="slider-2">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/slider-3.webp" alt="slider-3">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/slider-4.webp" alt="slider-4">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/slider-5.webp" alt="slider-5">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+           </section>
 
-
-
+           <!-- section 5 -->
+            <section>
+              <div class="container relative pt-20 pb-20">
+                <div class="grid grid-cols-2">
+                    <div class="item">
+                        <img src="assets/img/dance.webp" alt="dance">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/lighting.webp" alt="lighting">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/panda.webp" alt="panda">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/teddy.webp" alt="teddy">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/work.webp" alt="work">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/art.webp" alt="art">
+                    </div>
+                </div>
+              </div>
+            </section>
+            <!-- section 6 -->
+             <section>
+                <a href="https://g.co/kgs/Ba8qYF9" target="_blank">
+                    <img src="assets/img/located.webp" alt="located">
+                </a>
+               
+             </section>
     </main>
 
     <!-- form -->
-    <div
-    class="form-section fixed top-[35%] lg:top-[90%] left-[50%]  transform lg:-translate-y-1/2 -translate-x-1/2 z-[9999] block">
-    <div class="w-full  p-3 btn-bg   
-    !rounded-lg shadow-md relative">
-        <div class="bg-black p-2 text-white block w-[40px] text-center mb-[1rem] ml-auto lg:hidden" id="form-close">
-            X</div>
-        <form class="flex-col lg:flex lg:flex-row gap-4" id="contactForm">
 
-            <!-- Name Field -->
-            <div class="flex flex-col mb-3">
-                <input type="text" id="name" name="name" placeholder="Your Name"
-                    class="px-4 py-2 rounded-md border">
-            </div>
-
-            <!-- Email Field -->
-            <div class="flex flex-col mb-3">
-                <input type="email" id="email" name="email" placeholder="Your Email"
-                    class="px-4 py-2 rounded-md border">
-            </div>
-
-            <!-- Phone Field -->
-            <div class="flex flex-col mb-3">
-                <input type="tel" id="phone" name="phone" placeholder="Your Number"
-                    class="px-4 py-2 rounded-md border">
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit"
-                class="px-4 py-2 font-semibold text-white bg-black rounded-md hover:bg blue-600 h-[43px]">
-                Submit
-            </button>
-        </form>
-    </div>
-</div>
-   
-
-    <footer class="bg-black pt-[50px] md:pt-[100px]" id="contactSection">
+    <footer class="bg-transparent pt-[50px] md:pt-[100px]" id="contactSection">
         <div class="container">
             <div class="grid grid-cols-12">
                 <div class="col-span-12 md:col-span-5 lg:col-span-4">
-                    <a href="#">
-                        <img src="assets/img/logo.webp" alt="logo" class="w-[150px]">
-                    </a>
+                    <a href="#" class="h1 text-gradient">MVN</a>
                     <p class="text-white mt-[15px]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam quaerat itaque veritatis minima repudiandae nisi. Corporis deserunt tempore minima nihil officiis veniam qui quae accusantium, a amet impedit reprehenderit.
                     </p>
@@ -900,39 +144,41 @@
                         <!-- Name Field -->
                         <div class="flex flex-col mb-3">
                             <input type="text" id="name" name="name" placeholder="Your Name"
-                                class="py-2 border-b-2 bg-transparent text-white">
+                                class="py-2 border-b-2 bg-transparent text-goldLight border-goldLight">
                         </div>
 
                         <!-- Email Field -->
                         <div class="flex flex-col mb-3">
                             <input type="email" id="email" name="email" placeholder="Your Email"
-                                class="py-2 border-b-2 bg-transparent text-white">
+                                class="py-2 border-b-2 bg-transparent text-goldLight border-goldLight">
                         </div>
 
                         <!-- Phone Field -->
                         <div class="flex flex-col mb-3">
                             <input type="tel" id="phone" name="phone" placeholder="Your Number"
-                                class="py-2 border-b-2 bg-transparent text-white">
+                                class="py-2 border-b-2 bg-transparent text-goldLight border-goldLight">
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit"
-                            class="px-4 py-2 font-semibold text-black bg-white h-[43px]">
+                            class="px-4 py-2 font-semibold text-black bg-goldLight h-[43px]">
                             Submit
                         </button>
                     </form>
                 </div>
             </div>
             <p class="text-center text-white py-[25px] md:py-[40px]">
-                © Omaxe 2024. All rights reserved.
+                © MVN 2024. All rights reserved.
             </p>
         </div>
     </footer>
+
+
     <!-- Jquery.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-    <!-- Owl.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- GSAP and ScrollTrigger.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
@@ -940,8 +186,8 @@
     <!-- Lenis -->
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.js"></script>
 
-    <!-- Omaxe.js -->
-    <script src="assets/js/omaxe.js"></script>
+    <!-- mvn.js -->
+    <script src="assets/js/mvn.js"></script>
 
 </body>
 
